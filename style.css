@@ -18,12 +18,14 @@ body {
     background-color: #05080a;
     justify-content: space-between;
     align-items: center;
+    border-radius: 5px;    
 }
 
 .header__logo {
 font-size: 36px;
 text-transform: uppercase;
 margin-left: 16px;
+letter-spacing: 2px;
 }
 
 .header__nav ul {
@@ -33,8 +35,83 @@ margin-left: 16px;
     gap: 16px;
 }
 
-.header__nav ul a {
+.header__nav a {
     color: white;
     text-decoration: none;
     padding: 14px;
+    border-radius: 5%;
+    transition: 0.3s;
+}
+
+.header__nav a:hover {
+    text-decoration: underline;
+}
+
+a.header__nav--active {
+    background-color: #cbe300;
+    color: #0c1014;
+    pointer-events: none;    
+}
+
+
+.pricing {
+    display: flex;
+    gap: 16px;
+}
+
+.pricing-plan {
+    background-color: #1f2c25;
+    flex: 1;
+    padding: 30px;
+    border-radius: 6px;
+    box-shadow: 0 5px 12px -6px black;
+    display: flex;
+    flex-direction: column;
+}
+
+.class-plan__title {
+    text-transform: uppercase;
+    border-bottom: 2px solid #cbe300;
+    margin: 0;
+    padding-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+.pricing-plan p {
+    margin-top: 0;
+}
+
+.pricing-plan__price {
+    font-size: 34px;
+}
+
+.pricing-plan__features {
+    margin: 0 0 35px;
+    color: #b5b5b5;
+    padding-left: 16px;
+    line-height: 1.8;
+    flex: 1;
+}
+
+.pricing-plan__features li::marker {
+    color: #cbe300;
+}
+
+.pricing-plan__cta {
+    text-decoration: none;
+    color: #0c1014;
+    background-color: #cbe300;
+    border-radius: 6px;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 16px;
+    text-align: center;
+}
+
+.pricing-plan__cta:hover {
+    outline: 1px solid #cbe300;
+    background-color: transparent;
+    color: white;
+    transition: 0.1s;
 }
